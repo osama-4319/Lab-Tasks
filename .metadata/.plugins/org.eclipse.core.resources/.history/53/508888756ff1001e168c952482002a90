@@ -1,0 +1,64 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+class Pos implements ActionListener{
+    //Freme
+    JFrame frame = new JFrame();
+    //Labels
+    JLabel posLabel = new JLabel("Text Matching");
+    JLabel idLabel = new JLabel("Text 1");
+    JLabel nameLabel = new JLabel("Text 2");
+    
+    //TextFields
+    JTextField t1 = new JTextField("0");
+    JTextField t2 = new JTextField();
+    
+    //Button
+    JButton text1 = new JButton("Text 1");
+    JButton text2 = new JButton("Text 2");
+    
+ 
+    Pos(){
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        posLabel.setBounds(280, 10, 100, 20);
+        frame.add(posLabel);
+        
+        idLabel.setBounds(20, 50, 100, 20);
+        idField.setBounds(100, 50, 100, 30);
+        frame.add(idLabel);
+        frame.add(idField);
+        
+        nameLabel.setBounds(20, 90, 100, 20);
+        nameField.setBounds(100, 90, 100, 30);
+        frame.add(nameLabel);
+        frame.add(nameField);
+        
+        
+        text1.setBounds(100, 170, 100, 50);
+        frame.add(text1);
+        text1.addActionListener(this); 
+        
+        text2.setBounds(250, 170, 100, 50);
+        frame.add(text2);
+        text2.addActionListener(this); 
+        
+        frame.setSize(600,600);
+        frame.setLayout(null);
+        frame.setVisible(true);
+    }
+    
+    public void actionPerformed(ActionEvent e){
+    	String text1 = "";
+    	String text2 = "";
+        if(e.getSource() == text1) {
+        	text1 = text1.getText();
+        }
+    }
+}
+
+public class main{
+    public static void main(String[] args){
+        System.out.println("Osama is the Great :)");
+        Pos obj = new Pos();
+    }
+}

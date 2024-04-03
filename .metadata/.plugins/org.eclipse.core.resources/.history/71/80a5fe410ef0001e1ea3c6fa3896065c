@@ -1,0 +1,61 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class POS implements ActionListener{
+
+    JFrame frame = new JFrame("POS");
+    
+    JLabel label= new JLabel("ID");
+    JLabel label2= new JLabel("Name");
+    JLabel label3= new JLabel("Des");
+    
+    JTextField id = new JTextField("");
+    JTextField name = new JTextField("");
+    JTextField Des = new JTextField("");
+    
+    JButton submit = new JButton("Submit");
+    
+    public POS(){
+    	
+
+        String[] designations = {"HR", "Staff"};
+        JComboBox cb =new JComboBox(designations);
+        
+        label.setBounds(10,20,50,20);
+        id.setBounds(60,20,50,20);
+        label2.setBounds(10,60,50,20);
+        name.setBounds(60,60,50,20);
+        label3.setBounds(10,100,50,20);
+        cb.setBounds(60,100,50,20);
+        
+        //Button
+        submit.setBounds(60,140,100,20);
+        
+        //Adding components to Frames
+        frame.add(label);
+        frame.add(id);
+        frame.add(label2);
+        frame.add(name);
+        frame.add(label3);
+        frame.add(cb);
+        frame.add(submit);
+        
+        
+        frame.setSize(300, 400);
+        frame.setLayout(null);
+    	frame.setVisible(true);
+
+        
+    	
+    }
+    public void actionPerformed(ActionEvent e) {
+    	System.out.println("Osama");
+    }
+
+	public static void main(String[] args) {
+		POS pos = new POS();
+
+	}
+
+}
